@@ -1,0 +1,41 @@
+sp:
+    00: a2, silent mode
+    04: ptr to matrix m0  -> ptr to matrix h
+    08: ptr to matrix m1  -> ptr to matrix o
+    12: ptr to matrix input -> output of argmax
+    16: ptr to output file
+    20: ra
+    24: int* to m0 row
+    28: int* to m0 column
+    32: int* to m1 row
+    36: int* to m1 column
+    40: int* to input row
+    44: int* to input column
+
+TODO:
+- remember to free memory
+- debug
+
+m0:
+-1, -2, 3, 4
+-5, 6, -7, 8
+9, -10, 11, -12
+
+input:
+1,
+2,
+3,
+4
+
+m0 * input:
+20,
+18,
+-26
+
+
+m1:
+1, -2, 4,
+46, -1, -5,
+2, .., 0,
+1, 3, 13,
+26, -7, 34
